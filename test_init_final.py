@@ -1306,7 +1306,7 @@ while True:
 				sayMessage = tmp_sayMessage[len(command[15])+1:]
 				await MakeSound(message.author.display_name +'님이.' + sayMessage, './sound/say')
 				await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
-				await PlaySound(voice_client1, './sound/say.mp3')
+				await PlaySound(voice_client1, './sound/say.wav')
 
 			################ 보탐봇 재시작 ################ 
 
