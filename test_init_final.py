@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*- 
 
-################ Server V13.2 #####################
+################ Server V14 #####################
 
 import os
 import sys
@@ -30,9 +30,6 @@ logging.basicConfig(stream=log_stream, level=logging.WARNING)
 #handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 #ilsanglog.addHandler(handler)
 #####################################################
-
-if not discord.opus.is_loaded():
-	discord.opus.load_opus('opus')
 
 basicSetting = []
 bossData = []
@@ -833,7 +830,7 @@ async def on_ready():
 		print('< 텍스트채널 [' + client.get_channel(basicSetting[7]).name + '] 접속완료>')
 		print('< 음성채널 [' + client.get_channel(basicSetting[6]).name + '] 접속완료>')
 		if basicSetting[8] != "":
-			('< 사다리채널 [' + client.get_channel(int(basicSetting[8])).name + '] 접속완료>')
+			print('< 사다리채널 [' + client.get_channel(int(basicSetting[8])).name + '] 접속완료>')
 		if basicSetting[11] != "":
 			print('< 정산채널 [' + client.get_channel(int(basicSetting[11])).name + '] 접속완료>')
 		if int(basicSetting[13]) != 0 :
@@ -1559,7 +1556,7 @@ while True:
 			################ 보탐봇 기본 설정확인 ################ 
 
 			if message.content == command[1]:		
-				setting_val = '보탐봇버전 : Server Ver.13.2 (2020. 1. 21.)\n'
+				setting_val = '보탐봇버전 : Server Ver.14 (2020. 1. 30.)\n'
 				setting_val += '음성채널 : ' + client.get_channel(basicSetting[6]).name + '\n'
 				setting_val += '텍스트채널 : ' + client.get_channel(basicSetting[7]).name +'\n'
 				if basicSetting[8] != "" :
